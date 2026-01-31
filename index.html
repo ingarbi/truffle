@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truffle Elixir - Элитный трюфельный сок ручной работы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="media/videos.mp4" as="video" type="video/mp4">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <i class="fas fa-wine-bottle"></i>
+            <span>Truffle Elixir</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-wine-bottle"></i>
+                <span class="logo-text">Truffle Elixir</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    <li><a href="#about" class="nav-link">Технология</a></li>
+                    <li><a href="#features" class="nav-link">Преимущества</a></li>
+                    <li><a href="#order" class="nav-link">Заказать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="video-container">
+            <div class="video-loading" id="videoLoading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Загрузка видео...</span>
+            </div>
+            <video class="hero-video" autoplay loop muted playsinline preload="metadata" id="heroVideo">
+                <source src="media/videos.mp4" type="video/mp4">
+                <source src="media/videos.webm" type="video/webm">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="video-overlay"></div>
+            
+            <div class="video-controls">
+                <button id="soundToggle" class="control-btn" title="Включить звук">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <button id="zoomToggle" class="control-btn" title="Увеличить масштаб">
+                    <i class="fas fa-expand-alt"></i>
+                </button>
+                <button id="qualityToggle" class="control-btn" title="Качество">
+                    <i class="fas fa-hd"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title animate-fade-up">
+                    <span class="highlight">Элитный</span> трюфельный сок
+                </h1>
+                <p class="hero-subtitle animate-fade-up delay-200">
+                    Ручная работа по старинному методу паровой варки. 
+                    Каждая капля — концентрация природы, здоровья и изысканного вкуса.
+                </p>
+                <div class="hero-buttons animate-fade-up delay-400">
+                    <a href="#order" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i> Заказать сейчас
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i> Узнать технологию
+                    </a>
+                </div>
+                <div id="videoPlayBtnContainer" class="video-play-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fade-left">Наша технология</h2>
+                <p class="section-subtitle animate-fade-left delay-200">Паровая варка для сохранения полезных веществ</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-fade-right">
+                    <div class="about-card">
+                        <h3><i class="fas fa-flask"></i> Натуральный состав</h3>
+                        <p><strong>Трюфельный сок</strong> — уникальное натуральное средство для профилактики глазных заболеваний. Содержит комплекс витаминов (C, B, D, K) и минералов (железо, калий, магний), аминокислоты и антиоксиданты.</p>
+                        
+                        <h3><i class="fas fa-fire"></i> Метод паровой варки</h3>
+                        <p>Традиционная технология позволяет сохранить все полезные вещества, которые разрушаются при обычной термической обработке. Пар мягко извлекает эфирные масла и активные компоненты.</p>
+                        
+                        <h3><i class="fas fa-seedling"></i> Прямые поставки</h3>
+                        <p>Мы работаем напрямую с охотниками за трюфелями в Италии, Франции и Хорватии, используя только свежие грибы высшего качества.</p>
+                        
+                        <div class="process-steps">
+                            <div class="step">
+                                <span class="step-number">01</span>
+                                <h4>Отбор трюфелей</h4>
+                                <p>Ручной отбор свежих трюфелей</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">02</span>
+                                <h4>Паровая обработка</h4>
+                                <p>Щадящая экстракция при 65°C</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">03</span>
+                                <h4>Фильтрация</h4>
+                                <p>Многоступенчатая очистка</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">04</span>
+                                <h4>Упаковка</h4>
+                                <p>Стерильная стеклянная тара</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-media animate-fade-left delay-400">
+                    <div class="media-container">
+                        <img src="media/production.jpg" alt="Процесс производства трюфельного сока" class="about-image">
+                        <div class="media-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <p>Посмотреть процесс производства</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fade-up">Почему выбирают нас</h2>
+                <p class="section-subtitle animate-fade-up delay-200">Уникальные преимущества нашего продукта</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-fade-up delay-300">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% натуральный</h3>
+                    <p>Абсолютно натуральный продукт без консервантов, полученный методом парового отжима</p>
+                </div>
+                <div class="feature-card animate-fade-up delay-400">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Для здоровья глаз</h3>
+                    <p>Комплекс витаминов и минералов специально для поддержания зрения и здоровья глаз</p>
+                </div>
+                <div class="feature-card animate-fade-up delay-500">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Бесплатная доставка по республике и отправка по всей России в течение 24 часов</p>
+                </div>
+                <div class="feature-card animate-fade-up delay-600">
+                    <div class="feature-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h3>Выгодные скидки</h3>
+                    <p>При покупке от 5 флаконов цена за один всего 3000₽. Акции для постоянных клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+        <div class="order-background"></div>
+        <div class="order-overlay"></div>
+        <div class="container">
+            <div class="order-content">
+                <div class="order-info animate-fade-right">
+                    <h2 class="order-title">Заказать трюфельный сок</h2>
+                    <div class="product-card">
+                        <div class="product-badge">ХИТ ПРОДАЖ</div>
+                        <h3><i class="fas fa-crown"></i> Премиум трюфельный сок</h3>
+                        <div class="product-details">
+                            <p><i class="fas fa-check"></i> Объем: 10 мл</p>
+                            <p><i class="fas fa-check"></i> Концентрация: 100%</p>
+                            <p><i class="fas fa-check"></i> Срок годности: 2 года</p>
+                            <p><i class="fas fa-check"></i> Сертифицировано</p>
+                        </div>
+                        <div class="price-container">
+                            <span class="old-price">3 500₽</span>
+                            <span class="current-price">3 200₽</span>
+                            <span class="discount">-300₽</span>
+                        </div>
+                        <p class="note">Цена указана за один флакон. При заказе от 5 штук — 3 000₽ за флакон.</p>
+                    </div>
+                </div>
+                <div class="order-form-container animate-fade-left delay-200">
+                    <div class="form-header">
+                        <h3><i class="fas fa-edit"></i> Форма заказа</h3>
+                        <p>Заполните форму, и мы свяжемся с вами в течение 15 минут</p>
+                    </div>
+                    <form id="orderForm" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Имя *</label>
+                                <input type="text" id="name" class="form-control" required placeholder="Ваше имя">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Телефон *</label>
+                                <input type="tel" id="phone" class="form-control" required placeholder="+7 (999) 123-45-67">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                            <input type="email" id="email" class="form-control" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity"><i class="fas fa-wine-bottle"></i> Количество флаконов *</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn minus">-</button>
+                                <input type="number" id="quantity" class="quantity-input" min="1" max="10" value="1" readonly>
+                                <button type="button" class="quantity-btn plus">+</button>
+                                <span class="quantity-label">шт.</span>
+                            </div>
+                            <div class="quantity-hint">
+                                <span id="totalPrice">3 200 ₽</span> — итоговая сумма
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Комментарий к заказу</label>
+                            <textarea id="message" class="form-control" rows="3" placeholder="Особые пожелания, время для звонка..."></textarea>
+                        </div>
+                        
+                        <div class="messenger-selection">
+                            <p><i class="fas fa-share-alt"></i> Выберите способ связи:</p>
+                            <div class="messenger-options">
+                                <label class="messenger-option selected">
+                                    <input type="radio" name="messenger" value="whatsapp" checked>
+                                    <div class="messenger-content">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span>WhatsApp</span>
+                                    </div>
+                                </label>
+                                <label class="messenger-option">
+                                    <input type="radio" name="messenger" value="telegram">
+                                    <div class="messenger-content">
+                                        <i class="fab fa-telegram"></i>
+                                        <span>Telegram</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Отправить заказ
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Ваши данные защищены и не будут переданы третьим лицам
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-wine-bottle"></i>
+                        <span>Truffle Elixir</span>
+                    </div>
+                    <p class="footer-description">
+                        Семейное производство элитного трюфельного сока с 1972 года. 
+                        Мы сохраняем старинные рецепты и используем метод паровой варки для максимального сохранения полезных веществ.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/79380112002" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Меню</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Главная</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Технология</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Преимущества</a></li>
+                        <li><a href="#order"><i class="fas fa-chevron-right"></i> Заказать</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Каир, ул. Трюфельная, 13</p>
+                        <p><i class="fas fa-phone"></i> +7 (938) 011-20-02</p>
+                        <p><i class="fas fa-envelope"></i> info@truffle-elixir.ru</p>
+                        <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Оплата и доставка</h4>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa" title="Visa"></i>
+                        <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                        <i class="fab fa-cc-paypal" title="PayPal"></i>
+                        <i class="fas fa-money-bill-wave" title="Наличные"></i>
+                    </div>
+                    <p>Доставка по всей России курьерской службой</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Truffle Elixir. Все права защищены.</p>
+                <p>Над проектом работали — AI Soft</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-success">
+                <i class="fas fa-check-circle"></i>
+                <h2>Заказ оформлен!</h2>
+                <p>Ваш заказ трюфельного сока успешно оформлен. Мы свяжемся с вами в течение 15 минут.</p>
+                <div id="orderDetails" class="order-details"></div>
+                <button class="btn btn-close-modal">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
